@@ -13,9 +13,9 @@ namespace TechJobsOOAutoGraded6
             nextId++;
         }
 
-        public Employer(string value) : this()
+        public Employer(string arg) : this()
         {
-            Value = value;
+            Value = arg;
         }
 
         public override bool Equals(object obj)
