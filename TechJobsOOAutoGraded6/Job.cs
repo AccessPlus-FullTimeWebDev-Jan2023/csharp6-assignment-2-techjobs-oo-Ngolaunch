@@ -52,8 +52,44 @@ namespace TechJobsOOAutoGraded6
 
         public override string ToString()
         {
-            return Name;
+            string results = "\n";
+
+            if (Id == 0)
+            {
+                results += "ID: Data not available\n";
+            }else
+            {
+                results += $"ID: {Id}\n";
+            }
+            if (Name == null)
+            {
+                results += "Name: Data not available\n";
+            }
+            if (EmployerName == null) 
+            {
+                results += "Employer: Data not available\n";
+            }
+
+            if (EmployerLocation == null) 
+            {
+                results += "Location: Data not available\n";
+            }
+
+            if (JobType == null) 
+            {
+                results += "Position Type: Data not available\n";
+            }
+
+            if (JobCoreCompetency == null) 
+            {
+                results += "Core Competency: Data not available\n";
+            }
+            results += "\n";
+
+            return results;
         }
+
+
 
     }
 }

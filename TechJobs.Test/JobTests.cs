@@ -39,6 +39,28 @@ namespace TechJobs.Tests
             Assert.IsFalse(job1.Equals(job2));  
         }
 
+        [TestMethod]
+
+        public void TestToStringStartsAndEndsWithNewLine()
+        {
+            Assert.AreEqual("\n \n", job3.ToString());
+
+        }
+        [TestMethod]
+        public void TestToStringContainsCorrectLabelsAndData()
+        {
+            var expected = 
+                "\n"
+                +"ID: 1\n"
+                + "Name: Data not available\n"
+                + "Employer: Data not available\n"
+                + "Location: Data not available\n"
+                + "Position Type: Data not available\n"
+                + "Core Competency: Data not available\n"
+                + "\n";
+
+            Assert.AreEqual(expected, job1.ToString());
+        }
     }
 
     
