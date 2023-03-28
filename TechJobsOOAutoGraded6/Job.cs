@@ -65,29 +65,51 @@ namespace TechJobsOOAutoGraded6
             {
                 results += "Name: Data not available\n";
             }
+            else
+            {
+                results += $"Name: {Name}\n";
+            }
             if (EmployerName == null) 
             {
                 results += "Employer: Data not available\n";
+            }
+            else
+            {
+                results += $"Employer: {EmployerName}\n";
             }
 
             if (EmployerLocation == null) 
             {
                 results += "Location: Data not available\n";
             }
+            else
+            {
+                results += $"Location: {EmployerLocation}\n";
+            }
 
             if (JobType == null) 
             {
                 results += "Position Type: Data not available\n";
+            }
+            else
+            {
+                results += $"Position Type: {JobType}\n";
             }
 
             if (JobCoreCompetency == null) 
             {
                 results += "Core Competency: Data not available\n";
             }
+            else
+            {
+                results += $"Core Competency: {JobCoreCompetency}\n";
+            }
             results += "\n";
 
             return results;
+
         }
+
 
 
 

@@ -43,11 +43,17 @@ namespace TechJobs.Tests
 
         public void TestToStringStartsAndEndsWithNewLine()
         {
-            Assert.AreEqual("\n \n", job3.ToString());
+            var actual = job3.ToString();
+
+            Assert.AreEqual("\n", (actual[0]).ToString());
+            Assert.AreEqual("\n", (actual[actual.Length-1]).ToString());
+
+            //Assert.AreEqual("\n", actual.First());
+            //Assert.AreEqual("\n", actual.Last());
 
         }
         [TestMethod]
-        public void TestToStringContainsCorrectLabelsAndData()
+        public void TestToStringHandlesEmptyField()
         {
             var expected = 
                 "\n"
@@ -60,6 +66,21 @@ namespace TechJobs.Tests
                 + "\n";
 
             Assert.AreEqual(expected, job1.ToString());
+        }
+        [TestMethod]
+        public void TestToStringContainsCorrectLabelsAndData()
+        {
+            var expected =
+               "\n"
+               + "ID: 3\n"
+               + "Name: Product tester\n"
+               + "Employer: ACME\n"
+               + "Location: Desert\n"
+               + "Position Type: Quality control\n"
+               + "Core Competency: Persistence\n"
+               + "\n";
+
+            Assert.AreEqual(expected, job3.ToString());
         }
     }
 
