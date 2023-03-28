@@ -57,7 +57,7 @@ namespace TechJobs.Tests
         {
             var expected = 
                 "\n"
-                +"ID: 1\n"
+                +$"ID: {job1.Id}\n"
                 + "Name: Data not available\n"
                 + "Employer: Data not available\n"
                 + "Location: Data not available\n"
@@ -72,7 +72,7 @@ namespace TechJobs.Tests
         {
             var expected =
                "\n"
-               + "ID: 3\n"
+               + $"ID: {job3.Id}\n"
                + "Name: Product tester\n"
                + "Employer: ACME\n"
                + "Location: Desert\n"
