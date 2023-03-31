@@ -36,8 +36,8 @@ namespace TechJobsOOAutoGraded6
 
         public override bool Equals(object obj)
         {
-            return obj is Location location &&
-                   Id == location.Id;
+            return obj is Job job &&
+                   Id == job.Id;
         }
 
         public override int GetHashCode()
